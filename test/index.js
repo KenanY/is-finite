@@ -14,22 +14,22 @@ test('returns `true` for finite values', function(t) {
 test('returns `false` for non-finite values', function(t) {
   t.plan(3);
 
-  t.ok(!isFinite(NaN));
-  t.ok(!isFinite(Infinity));
-  t.ok(!isFinite(-Infinity));
+  t.notOk(isFinite(NaN));
+  t.notOk(isFinite(Infinity));
+  t.notOk(isFinite(-Infinity));
 });
 
 test('returns `false` for non-numeric values', function(t) {
   t.plan(8);
 
-  t.ok(!isFinite(null));
-  t.ok(!isFinite(undefined));
-  t.ok(!isFinite([]));
-  t.ok(!isFinite(true));
-  t.ok(!isFinite(new Date));
-  t.ok(!isFinite(''));
-  t.ok(!isFinite(' '));
-  t.ok(!isFinite('2px'));
+  t.notOk(isFinite(null));
+  t.notOk(isFinite(undefined));
+  t.notOk(isFinite([]));
+  t.notOk(isFinite(true));
+  t.notOk(isFinite(new Date));
+  t.notOk(isFinite(''));
+  t.notOk(isFinite(' '));
+  t.notOk(isFinite('2px'));
 });
 
 test('returns `true` for numeric string values', function(t) {
